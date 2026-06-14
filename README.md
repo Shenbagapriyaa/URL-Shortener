@@ -116,8 +116,7 @@ MongoDB stores all users and URLs.
 
 
 ## 🎥 Demo Video
-
-([https://your-video-link](https://youtu.be/G1ZsLGPhqgs?si=M3xZharydIBsL_Xg))
+https://youtu.be/G1ZsLGPhqgs?si=M3xZharydIBsL_Xg
 
 
 ## 🧠 What I learned
