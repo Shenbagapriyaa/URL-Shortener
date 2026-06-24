@@ -163,10 +163,20 @@ const Dashboard = () => {
 
                   <td style={styles.td}>{item.clicks}</td>
 
+                  {/* ✅ FIXED ALIGNMENT HERE */}
                   <td style={styles.td}>
-                    {new Date(
-                      item.createdAt
-                    ).toLocaleDateString()}
+                    <div style={styles.dateWrap}>
+                      <div style={styles.dateText}>
+                        {new Date(item.createdAt).toLocaleDateString("en-GB")}
+                      </div>
+
+                      <div style={styles.timeText}>
+                        {new Date(item.createdAt).toLocaleTimeString("en-IN", {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })}
+                      </div>
+                    </div>
                   </td>
 
                   <td style={styles.td}>
@@ -336,6 +346,24 @@ const styles = {
     borderRadius: "6px",
     color: "white",
     cursor: "pointer",
+  },
+
+  /* ✅ NEW ALIGNMENT STYLES */
+  dateWrap: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "2px",
+  },
+
+  dateText: {
+    fontSize: "14px",
+    fontWeight: "500",
+  },
+
+  timeText: {
+    fontSize: "12px",
+    color: "#aaa",
+    paddingLeft: "6px",
   },
 };
 
