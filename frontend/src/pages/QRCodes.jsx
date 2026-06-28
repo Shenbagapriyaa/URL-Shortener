@@ -7,7 +7,7 @@ const QRCodes = () => {
   const [qrValue, setQrValue] = useState("");
 
   // 🔥 CHANGE ONLY THIS WHEN YOU DEPLOY
-  const BASE_URL = "http://10.64.250.18:5000";
+ const BASE_URL = "http://localhost:5000";
 
   const generateQR = () => {
     if (!shortId) {
